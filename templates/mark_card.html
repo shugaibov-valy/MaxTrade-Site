@@ -21,7 +21,6 @@
                 </a>
             </li>
             <li class="breadcrumb-item"><a href="#">MaxTrade-Map</a></li>
-            <li class="breadcrumb-item"><a href="#">Жалоба № {{ info['id'] }}</a></li>
         </ol>
         <a href="/map">Вернуться на карту <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
@@ -30,7 +29,7 @@
     </nav>
     <div class="d-flex justify-content-between w-100 flex-wrap">
         <div class="mb-3 mb-lg-0">
-            <h3>Данные о жалобе</h3>
+            <h3>Аварийная ситуация</h3>
         </div>
     </div>
 </div>
@@ -43,119 +42,30 @@
                     <div class="col-lg-6 col-sm-6">
                         <h4>{{ info['title'] }}</h4>
 
-                    
-                        <!-- Form -->
-                        <div class="mb-4">
-                            <label for="login">ФИО:</label>
-                            <input type="login" class="form-control" id="address" value="{{ author['surname'] }} {{ author['name'] }}" readonly>
-                        </div>
 
+                      <form method="post">
                         <div class="mb-4">
                             <label for="login">Адрес:</label>
                             <input type="login" class="form-control" id="address" value="{{ info['streetName'] }}" readonly>
                         </div>
                     
-                        <!-- Form -->
-                        <div class="mb-4">
-                            <label for="login">Категория:</label>
-                            <input type="login" class="form-control" id="category" value="{{ info['type'] }}" readonly>
-                        </div>
                         
                         <!-- Form -->
                         <div class="my-4">
                             <label for="textarea">Описание:</label>
-                            <textarea class="form-control" placeholder="Комментарий" id="comment" rows="5"
-                                readonly>{{ info['description'] }}</textarea>
+                            <textarea class="form-control" placeholder="Комментарий" name="description" id="description" rows="5">{{ info['description'] }}</textarea>
                         </div>
                         
-
-                        <!-- Form -->
-                        <div class="mb-4">
-                            <label for="login">Фото:</label>
-                            <img src="{{ info['problemImageURL'] }}">
-                        </div>
-
-                        <!-- Form -->
-                        <div class="mb-4">
-                            <label for="login">Кол-во лайков <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                              </svg>:</label>
-                            <input type="login" class="form-control" id="count_like" value="{{ info['count_like'] }} " readonly>
-                        </div>
 
                          <!-- Form -->
                          <div class="mb-4">
                             <label for="login">Дата создания:</label>
-                            <input type="login" class="form-control" id="count_like" value="{{ info['date'].split('.')[0] }}" readonly>
-                        </div>
+                            <input type="login" class="form-control" id="date_create" value="{{ info['date'].split('.')[0] }}" readonly>
+                          </div>
+
+                          <button class="btn btn-success" type="submit">Сохранить</button>
+                        </form>
                     </div>
-
-
-
-
-                    <div class="col-lg-4 col-sm-6" id="chat_box">
-
-                        <h4>Чат</h4>
-                        <section class="chatbox">
-                          <section class="chat-window">
-                            {% for mes in messages %}
-                            <article class="msg-container msg-remote" id="msg-0">
-                              <div class="msg-box">
-                                <div class="flr">
-                                  <div class="messages">
-                                    {% if mes.detailed == None %}
-                                    <p class="msg" id="msg-0">
-                                      {{ mes.text }}
-                                    </p>
-                                    {% elif mes.detailed == "True" %}
-                                    <!-- делим текст по точке -->
-                                    <p class="msg" id="msg-0">
-                                      {{ mes.text[0] }}
-                                    </p>
-                                    <div class="accordion" id="#pa">
-                                      <div class="accordion-item">
-                                        <p class="accordion-header" id="headingOne">
-                                          <button class="accordion-button" type="button" style="color: #black; height: 30px"
-                                            data-bs-toggle="collapse" data-bs-target="#p{{ mes.id }}" aria-expanded="true" aria-controls="p">
-                                            Подробнее
-                                          </button>
-                                        </p>
-                                        <div id="p{{ mes.id }}" class="accordion-collapse collapse" aria-labelledby="headingOne"
-                                          data-bs-parent="#pa">
-                                          <div class="accordion-body" style="color: white;">
-                                            {{ mes.text[1] }}
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                      
-                                    {% endif %}
-                                  </div>
-                                  <span class="timestamp"><span class="username">{{ mes.worker }}</span>&bull;<span class="posttime">{{
-                                      mes.created_at }}</span></span>
-                                </div>
-                              </div>
-                            </article>
-                      
-                            {% endfor %}
-                      
-                          </section>
-                      
-                          <form class="chat-input" onsubmit="return false;">
-                            <input type="text" name="input_value" id="input_value" autocomplete="on" placeholder="Введите сообщение" />
-                            <button onclick="SendMessage()">
-                              <svg style="width:24px;height:24px" viewBox="0 0 24 24">
-                                <path
-                                  d="M17,12L12,17V14H8V10H12V7L17,12M21,16.5C21,16.88 20.79,17.21 20.47,17.38L12.57,21.82C12.41,21.94 12.21,22 12,22C11.79,22 11.59,21.94 11.43,21.82L3.53,17.38C3.21,17.21 3,16.88 3,16.5V7.5C3,7.12 3.21,6.79 3.53,6.62L11.43,2.18C11.59,2.06 11.79,2 12,2C12.21,2 12.41,2.06 12.57,2.18L20.47,6.62C20.79,6.79 21,7.12 21,7.5V16.5M12,4.15L5,8.09V15.91L12,19.85L19,15.91V8.09L12,4.15Z" />
-                              </svg>
-                      
-                            </button>
-                          </form>
-                        </section>
-                      </div>
-
-
-
                 </div>
 
             </div>

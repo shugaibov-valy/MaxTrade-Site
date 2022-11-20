@@ -13,7 +13,7 @@ def generate_map(default_address=None, default_location=None, complaints=None, m
             danger_icon = folium.features.CustomIcon(icon_image=icon_path ,icon_size=(50,50))
             folium.Marker(location=[mark['latitude'], mark['longitude']], 
                                 icon=danger_icon,
-                                popup=f"<p>{coords_to_address(mark['longitude'], mark['latitude'])}</p><a target='_blank' href=''>подробнее...</a>").add_to(map)
+                                popup=f"<p>{mark['streetName'].split('Россия, ')[1]}</p><a target='_blank' href='/mark/{mark['id']}'>подробнее...</a>").add_to(map)
 
 
         ### жалобы пользователей
@@ -40,7 +40,7 @@ def generate_map(default_address=None, default_location=None, complaints=None, m
             danger_icon = folium.features.CustomIcon(icon_image=icon_path ,icon_size=(50,50))
             folium.Marker(location=[mark['latitude'], mark['longitude']], 
                                 icon=danger_icon,
-                                popup=f"<p>{coords_to_address(mark['longitude'], mark['latitude'])}</p><a target='_blank' href=''>подробнее...</a>").add_to(map)
+                                popup=f"<p>{mark['streetName'].split('Россия, ')[1]}</p><a target='_blank' href='/mark/{mark['id']}'>подробнее...</a>").add_to(map)
 
 
 

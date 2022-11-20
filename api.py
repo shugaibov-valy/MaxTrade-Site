@@ -39,6 +39,7 @@ def get_complaint_by_id(complaint_id):
     return result
 
 
+
 def create_mark(longitude, latitude, description):
     json_data = dict(
         longitude=longitude,
@@ -50,8 +51,28 @@ def create_mark(longitude, latitude, description):
     return result
 
 
+def get_mark_by_id(mark_id):
+    json_data = dict(
+        markId=mark_id
+    )
+    url = api_url + '/marks/get_by_id'
+    result = requests.post(url=url, json=json_data).json()['result']
+    return result
+
+
 def get_marks():
     json_data = dict()
     url = api_url + '/marks/all_marks'
     result = requests.post(url=url, json=json_data).json()['result']
+    return result
+
+
+def update_mark(mark_id, desc):
+    json_data = dict(
+        markId=mark_id,
+        description=desc 
+    )
+    url = api_url + '/marks/update_mark'
+    result = requests.post(url=url, json=json_data).json()
+    print(result)
     return result

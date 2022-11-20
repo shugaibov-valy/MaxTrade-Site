@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_f820112f71cb6aba46e79d7bd7ebc8fa {
+                #map_749e4dd17c5dcde878e4b44f62826bbf {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -38,14 +38,14 @@
 <body>
     
     
-            <div class="folium-map" id="map_f820112f71cb6aba46e79d7bd7ebc8fa" ></div>
+            <div class="folium-map" id="map_749e4dd17c5dcde878e4b44f62826bbf" ></div>
         
 </body>
 <script>
     
     
-            var map_f820112f71cb6aba46e79d7bd7ebc8fa = L.map(
-                "map_f820112f71cb6aba46e79d7bd7ebc8fa",
+            var map_749e4dd17c5dcde878e4b44f62826bbf = L.map(
+                "map_749e4dd17c5dcde878e4b44f62826bbf",
                 {
                     center: [42.9831, 47.504745],
                     crs: L.CRS.EPSG3857,
@@ -59,209 +59,271 @@
 
         
     
-            var tile_layer_572a3351468637ba2a9d4f2ee1297c83 = L.tileLayer(
+            var tile_layer_0083f978f81ae0553702adf1b5afaf70 = L.tileLayer(
                 "https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg",
                 {"attribution": "Map tiles by \u003ca href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_f820112f71cb6aba46e79d7bd7ebc8fa);
+            ).addTo(map_749e4dd17c5dcde878e4b44f62826bbf);
         
     
-            var marker_c3a08d9a2dadb78730c16d194bce31c3 = L.marker(
-                [42.953235, 47.504727],
+            var marker_ee94535296651183bfcb3c8e1e7efe4b = L.marker(
+                [42.961502, 47.513827],
                 {}
-            ).addTo(map_f820112f71cb6aba46e79d7bd7ebc8fa);
+            ).addTo(map_749e4dd17c5dcde878e4b44f62826bbf);
         
     
-        var custom_icon_4bf1eb88887ba59b7a8172cd121638d3 = L.icon({"iconSize": [50, 50], "iconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGEAAABYCAYAAADlc5nGAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAUGSURBVHgB7Zw/TxRBGMZflMJEQi4U5hIplkhFdfaEHI2hpOAD3AcggZLuMKGHgsoGrLQgwcpY6ZFYYAUmajTReCRnggQJXE5EQu6cd29HxvXgdmfnL7y/ZLMjdzF389w8M++zswtAEFkoFos5dhTBc3rAU1jfT7ZarfXon9s9PT3jlUrlEDzkBngIEyBgAixiu695hqcCO2bBU7wUgVFmRzB8+hMW9t6Hf2CilFEc8BDvRMA5gHV4CdsLe++gcHIIU/Vv4Wvs7yvgId6JwDu6dLgD+bMTaLervI0aeWdLXokwNjYW2hB2OHY8B+eFuf1PYdtHW/JGBOxYtgKax/bS7tv/XkdbGj3ex2bON1vyRgTWsa/wjP7PbSjO9MEXvlpCW5oET/BCBGZDM9DBhuK0X98J2zgasJgDD3BeBNGGsIOjX/qFTNVroTUxcs1mswwe4MNIwI7MTTR2AY8k4CSNYjHxZn2INZwWgfVfCWsC0WaSgO8XawfXbclZEaJoIrQTsSZICs4dw6cNbAbgeKTh8kgIa4LCyVFiG4qDqyUkqh0K4ChOiiBGE3P7H0GWWKSxCI7ipAidoglZfIg0nBPhomhCFh8iDadE6BZNyOJ6pOGUCEmiCVl47QAORhrOiKDahuKgAK5GGk6IENlQOGkmiSZkcTXScGUkpI4mZHEx0rAugmw0IYuLkYZVEbJGE7KIkYYLtmR7JIST8ejxD+02FIdHGpEtWY00rInAbQjb0wefwTQu7dK4CRZAH2Zf/Alr5tCGokLKOCO/6/Dy9h1o3OjNDw0NHVWr1U2wgJWRwHw40eVK3bgSaRgXQVk08YAVva+/nh+DAciAtjTR+I5Na5GGcRF4NJF5NdSfa3c8PzKAc5IQaRhPWo2KoDSaqKvbgB2LNMqmawdjIog2xJeHmVAoAiJGGqYvABkTgfst1gO2VkPdEJLWkslIw4gIWBPgSWs0oWBk2No8pl0EY9GEInsSbMlYpGFiJISTsYmEVBWxSKMImtEqAo8mxNWHD2C4Z3KXhjYRomhCnw3VqqATYZdGgX2XedCINhEiPw3a+X0NfCMWaczojDS0iCBerlS5a8I0QtKqNdLQIoKyaCIpigs3EbQl3ZGGchF075roiEYROiStymsHpSKI0QT/4FcBrPCFSEO5LSkVgT/mAOuB6EPrZbNyfmhGiDQmVdcOyp5tEdUEK2hDOBmbumhvkrX+QVgeuIfNKhvx91U9S0PJSLC1a8I0uiINVXZkPprACznPt9hvsgXwaL19kccAOiKNzCKY3rz1l1mm+0i0UwUvdU6VwAQYaYhJKyggkwiiDenYSX0p8V++oZGAoC1F3zVQEWlkHQn2oomlh+f5EZ7XVsEUqiMN6dUR7lpjH2AL209rb+xMxvxi/4dtsMHywDBbMd3FZmVjY2McJJEeCbwmsLoawkrZkgCIqvvhpESwEk04CNpS7DbdACRILYKu+8p8RUWkkVoEnfeV+UrW++FSiSA+8sbHCzW6iO3SWEybtCYWIf7IGxoF/5Il0kgzEozdV+YrsvfDJRLBWjThGbL3w3UV4bokpKoQaocAEj7iJ8lIyPzIm+tG2htPeru9gf1HRTznz37Bai4AIhk4GnZ7b2GzyI7Vy97bVQQ2yTxGRV/05YFIDS6XKt3elCjAi3ZVB0Ck5Rm7BGov3CIIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgriS/AE3d3Ub9J86DQAAAABJRU5ErkJggg=="});
-        marker_c3a08d9a2dadb78730c16d194bce31c3.setIcon(custom_icon_4bf1eb88887ba59b7a8172cd121638d3);
+        var custom_icon_8b874910e867cabc59b4143aa5785ffe = L.icon({"iconSize": [50, 50], "iconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGEAAABYCAYAAADlc5nGAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAUGSURBVHgB7Zw/TxRBGMZflMJEQi4U5hIplkhFdfaEHI2hpOAD3AcggZLuMKGHgsoGrLQgwcpY6ZFYYAUmajTReCRnggQJXE5EQu6cd29HxvXgdmfnL7y/ZLMjdzF389w8M++zswtAEFkoFos5dhTBc3rAU1jfT7ZarfXon9s9PT3jlUrlEDzkBngIEyBgAixiu695hqcCO2bBU7wUgVFmRzB8+hMW9t6Hf2CilFEc8BDvRMA5gHV4CdsLe++gcHIIU/Vv4Wvs7yvgId6JwDu6dLgD+bMTaLervI0aeWdLXokwNjYW2hB2OHY8B+eFuf1PYdtHW/JGBOxYtgKax/bS7tv/XkdbGj3ex2bON1vyRgTWsa/wjP7PbSjO9MEXvlpCW5oET/BCBGZDM9DBhuK0X98J2zgasJgDD3BeBNGGsIOjX/qFTNVroTUxcs1mswwe4MNIwI7MTTR2AY8k4CSNYjHxZn2INZwWgfVfCWsC0WaSgO8XawfXbclZEaJoIrQTsSZICs4dw6cNbAbgeKTh8kgIa4LCyVFiG4qDqyUkqh0K4ChOiiBGE3P7H0GWWKSxCI7ipAidoglZfIg0nBPhomhCFh8iDadE6BZNyOJ6pOGUCEmiCVl47QAORhrOiKDahuKgAK5GGk6IENlQOGkmiSZkcTXScGUkpI4mZHEx0rAugmw0IYuLkYZVEbJGE7KIkYYLtmR7JIST8ejxD+02FIdHGpEtWY00rInAbQjb0wefwTQu7dK4CRZAH2Zf/Alr5tCGokLKOCO/6/Dy9h1o3OjNDw0NHVWr1U2wgJWRwHw40eVK3bgSaRgXQVk08YAVva+/nh+DAciAtjTR+I5Na5GGcRF4NJF5NdSfa3c8PzKAc5IQaRhPWo2KoDSaqKvbgB2LNMqmawdjIog2xJeHmVAoAiJGGqYvABkTgfst1gO2VkPdEJLWkslIw4gIWBPgSWs0oWBk2No8pl0EY9GEInsSbMlYpGFiJISTsYmEVBWxSKMImtEqAo8mxNWHD2C4Z3KXhjYRomhCnw3VqqATYZdGgX2XedCINhEiPw3a+X0NfCMWaczojDS0iCBerlS5a8I0QtKqNdLQIoKyaCIpigs3EbQl3ZGGchF075roiEYROiStymsHpSKI0QT/4FcBrPCFSEO5LSkVgT/mAOuB6EPrZbNyfmhGiDQmVdcOyp5tEdUEK2hDOBmbumhvkrX+QVgeuIfNKhvx91U9S0PJSLC1a8I0uiINVXZkPprACznPt9hvsgXwaL19kccAOiKNzCKY3rz1l1mm+0i0UwUvdU6VwAQYaYhJKyggkwiiDenYSX0p8V++oZGAoC1F3zVQEWlkHQn2oomlh+f5EZ7XVsEUqiMN6dUR7lpjH2AL209rb+xMxvxi/4dtsMHywDBbMd3FZmVjY2McJJEeCbwmsLoawkrZkgCIqvvhpESwEk04CNpS7DbdACRILYKu+8p8RUWkkVoEnfeV+UrW++FSiSA+8sbHCzW6iO3SWEybtCYWIf7IGxoF/5Il0kgzEozdV+YrsvfDJRLBWjThGbL3w3UV4bokpKoQaocAEj7iJ8lIyPzIm+tG2htPeru9gf1HRTznz37Bai4AIhk4GnZ7b2GzyI7Vy97bVQQ2yTxGRV/05YFIDS6XKt3elCjAi3ZVB0Ck5Rm7BGov3CIIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgriS/AE3d3Ub9J86DQAAAABJRU5ErkJggg=="});
+        marker_ee94535296651183bfcb3c8e1e7efe4b.setIcon(custom_icon_8b874910e867cabc59b4143aa5785ffe);
         
     
-        var popup_b887c7faa795b1ef48d2572b4f6c930a = L.popup({"maxWidth": "100%"});
+        var popup_39222ee0ea3979cc72e02742c7423de4 = L.popup({"maxWidth": "100%"});
 
         
             
-                var html_71ec5cca01835ab861e49c0bc3319382 = $(`<div id="html_71ec5cca01835ab861e49c0bc3319382" style="width: 100.0%; height: 100.0%;"><p>Россия, Республика Дагестан, Махачкала, проспект Гамидова, 50/17</p><a target='_blank' href=''>подробнее...</a></div>`)[0];
-                popup_b887c7faa795b1ef48d2572b4f6c930a.setContent(html_71ec5cca01835ab861e49c0bc3319382);
+                var html_e0f2122790f78bac36529b46ad85a41f = $(`<div id="html_e0f2122790f78bac36529b46ad85a41f" style="width: 100.0%; height: 100.0%;"><p>Республика Дагестан, Махачкала, проспект Гамидова, 49</p><a target='_blank' href='/mark/1'>подробнее...</a></div>`)[0];
+                popup_39222ee0ea3979cc72e02742c7423de4.setContent(html_e0f2122790f78bac36529b46ad85a41f);
             
         
 
-        marker_c3a08d9a2dadb78730c16d194bce31c3.bindPopup(popup_b887c7faa795b1ef48d2572b4f6c930a)
+        marker_ee94535296651183bfcb3c8e1e7efe4b.bindPopup(popup_39222ee0ea3979cc72e02742c7423de4)
         ;
 
         
     
     
-            var marker_6b8d553aa8c807234f48330fdfacdd44 = L.marker(
-                [42.934604, 47.515965],
+            var marker_74f7165a622875047de0321f07e38c6a = L.marker(
+                [42.941858, 47.533581],
                 {}
-            ).addTo(map_f820112f71cb6aba46e79d7bd7ebc8fa);
+            ).addTo(map_749e4dd17c5dcde878e4b44f62826bbf);
         
     
-        var custom_icon_a26faf9c68addbf2e5b8f075c860e842 = L.icon({"iconSize": [50, 50], "iconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGEAAABYCAYAAADlc5nGAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAUGSURBVHgB7Zw/TxRBGMZflMJEQi4U5hIplkhFdfaEHI2hpOAD3AcggZLuMKGHgsoGrLQgwcpY6ZFYYAUmajTReCRnggQJXE5EQu6cd29HxvXgdmfnL7y/ZLMjdzF389w8M++zswtAEFkoFos5dhTBc3rAU1jfT7ZarfXon9s9PT3jlUrlEDzkBngIEyBgAixiu695hqcCO2bBU7wUgVFmRzB8+hMW9t6Hf2CilFEc8BDvRMA5gHV4CdsLe++gcHIIU/Vv4Wvs7yvgId6JwDu6dLgD+bMTaLervI0aeWdLXokwNjYW2hB2OHY8B+eFuf1PYdtHW/JGBOxYtgKax/bS7tv/XkdbGj3ex2bON1vyRgTWsa/wjP7PbSjO9MEXvlpCW5oET/BCBGZDM9DBhuK0X98J2zgasJgDD3BeBNGGsIOjX/qFTNVroTUxcs1mswwe4MNIwI7MTTR2AY8k4CSNYjHxZn2INZwWgfVfCWsC0WaSgO8XawfXbclZEaJoIrQTsSZICs4dw6cNbAbgeKTh8kgIa4LCyVFiG4qDqyUkqh0K4ChOiiBGE3P7H0GWWKSxCI7ipAidoglZfIg0nBPhomhCFh8iDadE6BZNyOJ6pOGUCEmiCVl47QAORhrOiKDahuKgAK5GGk6IENlQOGkmiSZkcTXScGUkpI4mZHEx0rAugmw0IYuLkYZVEbJGE7KIkYYLtmR7JIST8ejxD+02FIdHGpEtWY00rInAbQjb0wefwTQu7dK4CRZAH2Zf/Alr5tCGokLKOCO/6/Dy9h1o3OjNDw0NHVWr1U2wgJWRwHw40eVK3bgSaRgXQVk08YAVva+/nh+DAciAtjTR+I5Na5GGcRF4NJF5NdSfa3c8PzKAc5IQaRhPWo2KoDSaqKvbgB2LNMqmawdjIog2xJeHmVAoAiJGGqYvABkTgfst1gO2VkPdEJLWkslIw4gIWBPgSWs0oWBk2No8pl0EY9GEInsSbMlYpGFiJISTsYmEVBWxSKMImtEqAo8mxNWHD2C4Z3KXhjYRomhCnw3VqqATYZdGgX2XedCINhEiPw3a+X0NfCMWaczojDS0iCBerlS5a8I0QtKqNdLQIoKyaCIpigs3EbQl3ZGGchF075roiEYROiStymsHpSKI0QT/4FcBrPCFSEO5LSkVgT/mAOuB6EPrZbNyfmhGiDQmVdcOyp5tEdUEK2hDOBmbumhvkrX+QVgeuIfNKhvx91U9S0PJSLC1a8I0uiINVXZkPprACznPt9hvsgXwaL19kccAOiKNzCKY3rz1l1mm+0i0UwUvdU6VwAQYaYhJKyggkwiiDenYSX0p8V++oZGAoC1F3zVQEWlkHQn2oomlh+f5EZ7XVsEUqiMN6dUR7lpjH2AL209rb+xMxvxi/4dtsMHywDBbMd3FZmVjY2McJJEeCbwmsLoawkrZkgCIqvvhpESwEk04CNpS7DbdACRILYKu+8p8RUWkkVoEnfeV+UrW++FSiSA+8sbHCzW6iO3SWEybtCYWIf7IGxoF/5Il0kgzEozdV+YrsvfDJRLBWjThGbL3w3UV4bokpKoQaocAEj7iJ8lIyPzIm+tG2htPeru9gf1HRTznz37Bai4AIhk4GnZ7b2GzyI7Vy97bVQQ2yTxGRV/05YFIDS6XKt3elCjAi3ZVB0Ck5Rm7BGov3CIIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgriS/AE3d3Ub9J86DQAAAABJRU5ErkJggg=="});
-        marker_6b8d553aa8c807234f48330fdfacdd44.setIcon(custom_icon_a26faf9c68addbf2e5b8f075c860e842);
+        var custom_icon_ab4dfc95421757ab840cbc66d9e37010 = L.icon({"iconSize": [50, 50], "iconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGEAAABYCAYAAADlc5nGAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAUGSURBVHgB7Zw/TxRBGMZflMJEQi4U5hIplkhFdfaEHI2hpOAD3AcggZLuMKGHgsoGrLQgwcpY6ZFYYAUmajTReCRnggQJXE5EQu6cd29HxvXgdmfnL7y/ZLMjdzF389w8M++zswtAEFkoFos5dhTBc3rAU1jfT7ZarfXon9s9PT3jlUrlEDzkBngIEyBgAixiu695hqcCO2bBU7wUgVFmRzB8+hMW9t6Hf2CilFEc8BDvRMA5gHV4CdsLe++gcHIIU/Vv4Wvs7yvgId6JwDu6dLgD+bMTaLervI0aeWdLXokwNjYW2hB2OHY8B+eFuf1PYdtHW/JGBOxYtgKax/bS7tv/XkdbGj3ex2bON1vyRgTWsa/wjP7PbSjO9MEXvlpCW5oET/BCBGZDM9DBhuK0X98J2zgasJgDD3BeBNGGsIOjX/qFTNVroTUxcs1mswwe4MNIwI7MTTR2AY8k4CSNYjHxZn2INZwWgfVfCWsC0WaSgO8XawfXbclZEaJoIrQTsSZICs4dw6cNbAbgeKTh8kgIa4LCyVFiG4qDqyUkqh0K4ChOiiBGE3P7H0GWWKSxCI7ipAidoglZfIg0nBPhomhCFh8iDadE6BZNyOJ6pOGUCEmiCVl47QAORhrOiKDahuKgAK5GGk6IENlQOGkmiSZkcTXScGUkpI4mZHEx0rAugmw0IYuLkYZVEbJGE7KIkYYLtmR7JIST8ejxD+02FIdHGpEtWY00rInAbQjb0wefwTQu7dK4CRZAH2Zf/Alr5tCGokLKOCO/6/Dy9h1o3OjNDw0NHVWr1U2wgJWRwHw40eVK3bgSaRgXQVk08YAVva+/nh+DAciAtjTR+I5Na5GGcRF4NJF5NdSfa3c8PzKAc5IQaRhPWo2KoDSaqKvbgB2LNMqmawdjIog2xJeHmVAoAiJGGqYvABkTgfst1gO2VkPdEJLWkslIw4gIWBPgSWs0oWBk2No8pl0EY9GEInsSbMlYpGFiJISTsYmEVBWxSKMImtEqAo8mxNWHD2C4Z3KXhjYRomhCnw3VqqATYZdGgX2XedCINhEiPw3a+X0NfCMWaczojDS0iCBerlS5a8I0QtKqNdLQIoKyaCIpigs3EbQl3ZGGchF075roiEYROiStymsHpSKI0QT/4FcBrPCFSEO5LSkVgT/mAOuB6EPrZbNyfmhGiDQmVdcOyp5tEdUEK2hDOBmbumhvkrX+QVgeuIfNKhvx91U9S0PJSLC1a8I0uiINVXZkPprACznPt9hvsgXwaL19kccAOiKNzCKY3rz1l1mm+0i0UwUvdU6VwAQYaYhJKyggkwiiDenYSX0p8V++oZGAoC1F3zVQEWlkHQn2oomlh+f5EZ7XVsEUqiMN6dUR7lpjH2AL209rb+xMxvxi/4dtsMHywDBbMd3FZmVjY2McJJEeCbwmsLoawkrZkgCIqvvhpESwEk04CNpS7DbdACRILYKu+8p8RUWkkVoEnfeV+UrW++FSiSA+8sbHCzW6iO3SWEybtCYWIf7IGxoF/5Il0kgzEozdV+YrsvfDJRLBWjThGbL3w3UV4bokpKoQaocAEj7iJ8lIyPzIm+tG2htPeru9gf1HRTznz37Bai4AIhk4GnZ7b2GzyI7Vy97bVQQ2yTxGRV/05YFIDS6XKt3elCjAi3ZVB0Ck5Rm7BGov3CIIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgriS/AE3d3Ub9J86DQAAAABJRU5ErkJggg=="});
+        marker_74f7165a622875047de0321f07e38c6a.setIcon(custom_icon_ab4dfc95421757ab840cbc66d9e37010);
         
     
-        var popup_dd31de6fb91e30e7193a06e58cd7c583 = L.popup({"maxWidth": "100%"});
+        var popup_f52e866f38413153c46658c61ded9ba2 = L.popup({"maxWidth": "100%"});
 
         
             
-                var html_215561fafcfdc999d22ea8865772a4fb = $(`<div id="html_215561fafcfdc999d22ea8865772a4fb" style="width: 100.0%; height: 100.0%;"><p>Россия, Республика Дагестан, Махачкала, проспект Амет-Хана Султана, 100</p><a target='_blank' href=''>подробнее...</a></div>`)[0];
-                popup_dd31de6fb91e30e7193a06e58cd7c583.setContent(html_215561fafcfdc999d22ea8865772a4fb);
+                var html_212452855f453eba707baaa770d3a2f5 = $(`<div id="html_212452855f453eba707baaa770d3a2f5" style="width: 100.0%; height: 100.0%;"><p>Республика Дагестан, Махачкала, Священная улица, 10</p><a target='_blank' href='/mark/2'>подробнее...</a></div>`)[0];
+                popup_f52e866f38413153c46658c61ded9ba2.setContent(html_212452855f453eba707baaa770d3a2f5);
             
         
 
-        marker_6b8d553aa8c807234f48330fdfacdd44.bindPopup(popup_dd31de6fb91e30e7193a06e58cd7c583)
+        marker_74f7165a622875047de0321f07e38c6a.bindPopup(popup_f52e866f38413153c46658c61ded9ba2)
         ;
 
         
     
     
-            var marker_dbe505c00cfc25fa5a3c9c3d89fd31e6 = L.marker(
-                [42.960994, 47.510799],
+            var marker_05982d78661392834a147f0224531e9a = L.marker(
+                [42.964504, 47.515318],
                 {}
-            ).addTo(map_f820112f71cb6aba46e79d7bd7ebc8fa);
+            ).addTo(map_749e4dd17c5dcde878e4b44f62826bbf);
         
     
-        var custom_icon_ce8ea20985eb082049072a384c4524ea = L.icon({"iconSize": [50, 50], "iconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGEAAABYCAYAAADlc5nGAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAUGSURBVHgB7Zw/TxRBGMZflMJEQi4U5hIplkhFdfaEHI2hpOAD3AcggZLuMKGHgsoGrLQgwcpY6ZFYYAUmajTReCRnggQJXE5EQu6cd29HxvXgdmfnL7y/ZLMjdzF389w8M++zswtAEFkoFos5dhTBc3rAU1jfT7ZarfXon9s9PT3jlUrlEDzkBngIEyBgAixiu695hqcCO2bBU7wUgVFmRzB8+hMW9t6Hf2CilFEc8BDvRMA5gHV4CdsLe++gcHIIU/Vv4Wvs7yvgId6JwDu6dLgD+bMTaLervI0aeWdLXokwNjYW2hB2OHY8B+eFuf1PYdtHW/JGBOxYtgKax/bS7tv/XkdbGj3ex2bON1vyRgTWsa/wjP7PbSjO9MEXvlpCW5oET/BCBGZDM9DBhuK0X98J2zgasJgDD3BeBNGGsIOjX/qFTNVroTUxcs1mswwe4MNIwI7MTTR2AY8k4CSNYjHxZn2INZwWgfVfCWsC0WaSgO8XawfXbclZEaJoIrQTsSZICs4dw6cNbAbgeKTh8kgIa4LCyVFiG4qDqyUkqh0K4ChOiiBGE3P7H0GWWKSxCI7ipAidoglZfIg0nBPhomhCFh8iDadE6BZNyOJ6pOGUCEmiCVl47QAORhrOiKDahuKgAK5GGk6IENlQOGkmiSZkcTXScGUkpI4mZHEx0rAugmw0IYuLkYZVEbJGE7KIkYYLtmR7JIST8ejxD+02FIdHGpEtWY00rInAbQjb0wefwTQu7dK4CRZAH2Zf/Alr5tCGokLKOCO/6/Dy9h1o3OjNDw0NHVWr1U2wgJWRwHw40eVK3bgSaRgXQVk08YAVva+/nh+DAciAtjTR+I5Na5GGcRF4NJF5NdSfa3c8PzKAc5IQaRhPWo2KoDSaqKvbgB2LNMqmawdjIog2xJeHmVAoAiJGGqYvABkTgfst1gO2VkPdEJLWkslIw4gIWBPgSWs0oWBk2No8pl0EY9GEInsSbMlYpGFiJISTsYmEVBWxSKMImtEqAo8mxNWHD2C4Z3KXhjYRomhCnw3VqqATYZdGgX2XedCINhEiPw3a+X0NfCMWaczojDS0iCBerlS5a8I0QtKqNdLQIoKyaCIpigs3EbQl3ZGGchF075roiEYROiStymsHpSKI0QT/4FcBrPCFSEO5LSkVgT/mAOuB6EPrZbNyfmhGiDQmVdcOyp5tEdUEK2hDOBmbumhvkrX+QVgeuIfNKhvx91U9S0PJSLC1a8I0uiINVXZkPprACznPt9hvsgXwaL19kccAOiKNzCKY3rz1l1mm+0i0UwUvdU6VwAQYaYhJKyggkwiiDenYSX0p8V++oZGAoC1F3zVQEWlkHQn2oomlh+f5EZ7XVsEUqiMN6dUR7lpjH2AL209rb+xMxvxi/4dtsMHywDBbMd3FZmVjY2McJJEeCbwmsLoawkrZkgCIqvvhpESwEk04CNpS7DbdACRILYKu+8p8RUWkkVoEnfeV+UrW++FSiSA+8sbHCzW6iO3SWEybtCYWIf7IGxoF/5Il0kgzEozdV+YrsvfDJRLBWjThGbL3w3UV4bokpKoQaocAEj7iJ8lIyPzIm+tG2htPeru9gf1HRTznz37Bai4AIhk4GnZ7b2GzyI7Vy97bVQQ2yTxGRV/05YFIDS6XKt3elCjAi3ZVB0Ck5Rm7BGov3CIIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgriS/AE3d3Ub9J86DQAAAABJRU5ErkJggg=="});
-        marker_dbe505c00cfc25fa5a3c9c3d89fd31e6.setIcon(custom_icon_ce8ea20985eb082049072a384c4524ea);
+        var custom_icon_4d35f438b96a33e570f4cb707c02a431 = L.icon({"iconSize": [50, 50], "iconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGEAAABYCAYAAADlc5nGAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAUGSURBVHgB7Zw/TxRBGMZflMJEQi4U5hIplkhFdfaEHI2hpOAD3AcggZLuMKGHgsoGrLQgwcpY6ZFYYAUmajTReCRnggQJXE5EQu6cd29HxvXgdmfnL7y/ZLMjdzF389w8M++zswtAEFkoFos5dhTBc3rAU1jfT7ZarfXon9s9PT3jlUrlEDzkBngIEyBgAixiu695hqcCO2bBU7wUgVFmRzB8+hMW9t6Hf2CilFEc8BDvRMA5gHV4CdsLe++gcHIIU/Vv4Wvs7yvgId6JwDu6dLgD+bMTaLervI0aeWdLXokwNjYW2hB2OHY8B+eFuf1PYdtHW/JGBOxYtgKax/bS7tv/XkdbGj3ex2bON1vyRgTWsa/wjP7PbSjO9MEXvlpCW5oET/BCBGZDM9DBhuK0X98J2zgasJgDD3BeBNGGsIOjX/qFTNVroTUxcs1mswwe4MNIwI7MTTR2AY8k4CSNYjHxZn2INZwWgfVfCWsC0WaSgO8XawfXbclZEaJoIrQTsSZICs4dw6cNbAbgeKTh8kgIa4LCyVFiG4qDqyUkqh0K4ChOiiBGE3P7H0GWWKSxCI7ipAidoglZfIg0nBPhomhCFh8iDadE6BZNyOJ6pOGUCEmiCVl47QAORhrOiKDahuKgAK5GGk6IENlQOGkmiSZkcTXScGUkpI4mZHEx0rAugmw0IYuLkYZVEbJGE7KIkYYLtmR7JIST8ejxD+02FIdHGpEtWY00rInAbQjb0wefwTQu7dK4CRZAH2Zf/Alr5tCGokLKOCO/6/Dy9h1o3OjNDw0NHVWr1U2wgJWRwHw40eVK3bgSaRgXQVk08YAVva+/nh+DAciAtjTR+I5Na5GGcRF4NJF5NdSfa3c8PzKAc5IQaRhPWo2KoDSaqKvbgB2LNMqmawdjIog2xJeHmVAoAiJGGqYvABkTgfst1gO2VkPdEJLWkslIw4gIWBPgSWs0oWBk2No8pl0EY9GEInsSbMlYpGFiJISTsYmEVBWxSKMImtEqAo8mxNWHD2C4Z3KXhjYRomhCnw3VqqATYZdGgX2XedCINhEiPw3a+X0NfCMWaczojDS0iCBerlS5a8I0QtKqNdLQIoKyaCIpigs3EbQl3ZGGchF075roiEYROiStymsHpSKI0QT/4FcBrPCFSEO5LSkVgT/mAOuB6EPrZbNyfmhGiDQmVdcOyp5tEdUEK2hDOBmbumhvkrX+QVgeuIfNKhvx91U9S0PJSLC1a8I0uiINVXZkPprACznPt9hvsgXwaL19kccAOiKNzCKY3rz1l1mm+0i0UwUvdU6VwAQYaYhJKyggkwiiDenYSX0p8V++oZGAoC1F3zVQEWlkHQn2oomlh+f5EZ7XVsEUqiMN6dUR7lpjH2AL209rb+xMxvxi/4dtsMHywDBbMd3FZmVjY2McJJEeCbwmsLoawkrZkgCIqvvhpESwEk04CNpS7DbdACRILYKu+8p8RUWkkVoEnfeV+UrW++FSiSA+8sbHCzW6iO3SWEybtCYWIf7IGxoF/5Il0kgzEozdV+YrsvfDJRLBWjThGbL3w3UV4bokpKoQaocAEj7iJ8lIyPzIm+tG2htPeru9gf1HRTznz37Bai4AIhk4GnZ7b2GzyI7Vy97bVQQ2yTxGRV/05YFIDS6XKt3elCjAi3ZVB0Ck5Rm7BGov3CIIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgriS/AE3d3Ub9J86DQAAAABJRU5ErkJggg=="});
+        marker_05982d78661392834a147f0224531e9a.setIcon(custom_icon_4d35f438b96a33e570f4cb707c02a431);
         
     
-        var popup_f44b55a9eaba9085e7e0a0d6f1634e78 = L.popup({"maxWidth": "100%"});
+        var popup_8bc6173cdb2a026cef998c0472ac3f96 = L.popup({"maxWidth": "100%"});
 
         
             
-                var html_049c1bea20cbb3a1d2f4adedbbfc3789 = $(`<div id="html_049c1bea20cbb3a1d2f4adedbbfc3789" style="width: 100.0%; height: 100.0%;"><p>Россия, Республика Дагестан, Махачкала, проспект Гамидова, 20</p><a target='_blank' href=''>подробнее...</a></div>`)[0];
-                popup_f44b55a9eaba9085e7e0a0d6f1634e78.setContent(html_049c1bea20cbb3a1d2f4adedbbfc3789);
+                var html_8912a34376c036305765382f1cceac4c = $(`<div id="html_8912a34376c036305765382f1cceac4c" style="width: 100.0%; height: 100.0%;"><p>Республика Дагестан, Махачкала, проспект Гамидова, 39</p><a target='_blank' href='/mark/3'>подробнее...</a></div>`)[0];
+                popup_8bc6173cdb2a026cef998c0472ac3f96.setContent(html_8912a34376c036305765382f1cceac4c);
             
         
 
-        marker_dbe505c00cfc25fa5a3c9c3d89fd31e6.bindPopup(popup_f44b55a9eaba9085e7e0a0d6f1634e78)
+        marker_05982d78661392834a147f0224531e9a.bindPopup(popup_8bc6173cdb2a026cef998c0472ac3f96)
         ;
 
         
     
     
-            var marker_5bec8fb655966f7a79ef69186d39f4f5 = L.marker(
-                [42.982189, 47.467312],
+            var marker_ac4877e7bbfd9090ef66a20831c45c64 = L.marker(
+                [42.970726175954525, 47.50544033686117],
                 {}
-            ).addTo(map_f820112f71cb6aba46e79d7bd7ebc8fa);
+            ).addTo(map_749e4dd17c5dcde878e4b44f62826bbf);
         
     
-        var custom_icon_ba62ad4742668ffa26db72784041a4b5 = L.icon({"iconSize": [50, 50], "iconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGEAAABYCAYAAADlc5nGAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAUGSURBVHgB7Zw/TxRBGMZflMJEQi4U5hIplkhFdfaEHI2hpOAD3AcggZLuMKGHgsoGrLQgwcpY6ZFYYAUmajTReCRnggQJXE5EQu6cd29HxvXgdmfnL7y/ZLMjdzF389w8M++zswtAEFkoFos5dhTBc3rAU1jfT7ZarfXon9s9PT3jlUrlEDzkBngIEyBgAixiu695hqcCO2bBU7wUgVFmRzB8+hMW9t6Hf2CilFEc8BDvRMA5gHV4CdsLe++gcHIIU/Vv4Wvs7yvgId6JwDu6dLgD+bMTaLervI0aeWdLXokwNjYW2hB2OHY8B+eFuf1PYdtHW/JGBOxYtgKax/bS7tv/XkdbGj3ex2bON1vyRgTWsa/wjP7PbSjO9MEXvlpCW5oET/BCBGZDM9DBhuK0X98J2zgasJgDD3BeBNGGsIOjX/qFTNVroTUxcs1mswwe4MNIwI7MTTR2AY8k4CSNYjHxZn2INZwWgfVfCWsC0WaSgO8XawfXbclZEaJoIrQTsSZICs4dw6cNbAbgeKTh8kgIa4LCyVFiG4qDqyUkqh0K4ChOiiBGE3P7H0GWWKSxCI7ipAidoglZfIg0nBPhomhCFh8iDadE6BZNyOJ6pOGUCEmiCVl47QAORhrOiKDahuKgAK5GGk6IENlQOGkmiSZkcTXScGUkpI4mZHEx0rAugmw0IYuLkYZVEbJGE7KIkYYLtmR7JIST8ejxD+02FIdHGpEtWY00rInAbQjb0wefwTQu7dK4CRZAH2Zf/Alr5tCGokLKOCO/6/Dy9h1o3OjNDw0NHVWr1U2wgJWRwHw40eVK3bgSaRgXQVk08YAVva+/nh+DAciAtjTR+I5Na5GGcRF4NJF5NdSfa3c8PzKAc5IQaRhPWo2KoDSaqKvbgB2LNMqmawdjIog2xJeHmVAoAiJGGqYvABkTgfst1gO2VkPdEJLWkslIw4gIWBPgSWs0oWBk2No8pl0EY9GEInsSbMlYpGFiJISTsYmEVBWxSKMImtEqAo8mxNWHD2C4Z3KXhjYRomhCnw3VqqATYZdGgX2XedCINhEiPw3a+X0NfCMWaczojDS0iCBerlS5a8I0QtKqNdLQIoKyaCIpigs3EbQl3ZGGchF075roiEYROiStymsHpSKI0QT/4FcBrPCFSEO5LSkVgT/mAOuB6EPrZbNyfmhGiDQmVdcOyp5tEdUEK2hDOBmbumhvkrX+QVgeuIfNKhvx91U9S0PJSLC1a8I0uiINVXZkPprACznPt9hvsgXwaL19kccAOiKNzCKY3rz1l1mm+0i0UwUvdU6VwAQYaYhJKyggkwiiDenYSX0p8V++oZGAoC1F3zVQEWlkHQn2oomlh+f5EZ7XVsEUqiMN6dUR7lpjH2AL209rb+xMxvxi/4dtsMHywDBbMd3FZmVjY2McJJEeCbwmsLoawkrZkgCIqvvhpESwEk04CNpS7DbdACRILYKu+8p8RUWkkVoEnfeV+UrW++FSiSA+8sbHCzW6iO3SWEybtCYWIf7IGxoF/5Il0kgzEozdV+YrsvfDJRLBWjThGbL3w3UV4bokpKoQaocAEj7iJ8lIyPzIm+tG2htPeru9gf1HRTznz37Bai4AIhk4GnZ7b2GzyI7Vy97bVQQ2yTxGRV/05YFIDS6XKt3elCjAi3ZVB0Ck5Rm7BGov3CIIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgriS/AE3d3Ub9J86DQAAAABJRU5ErkJggg=="});
-        marker_5bec8fb655966f7a79ef69186d39f4f5.setIcon(custom_icon_ba62ad4742668ffa26db72784041a4b5);
-        
-    
-        var popup_5d9025d052ee3d5cecd5d81f11450dde = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_8a446169a575ea990d3f0f0dbd01a0fa = $(`<div id="html_8a446169a575ea990d3f0f0dbd01a0fa" style="width: 100.0%; height: 100.0%;"><p>Россия, Республика Дагестан, Махачкала, проспект Али-Гаджи Акушинского, 11</p><a target='_blank' href=''>подробнее...</a></div>`)[0];
-                popup_5d9025d052ee3d5cecd5d81f11450dde.setContent(html_8a446169a575ea990d3f0f0dbd01a0fa);
-            
-        
-
-        marker_5bec8fb655966f7a79ef69186d39f4f5.bindPopup(popup_5d9025d052ee3d5cecd5d81f11450dde)
-        ;
-
-        
-    
-    
-            var marker_2e6723daf43c6e5eb5a9d38fb43c4d0c = L.marker(
-                [42.931357, 47.560458],
-                {}
-            ).addTo(map_f820112f71cb6aba46e79d7bd7ebc8fa);
-        
-    
-        var custom_icon_a7dd8ecbab8d8f7ee573075fe35b60ab = L.icon({"iconSize": [50, 50], "iconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGEAAABYCAYAAADlc5nGAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAUGSURBVHgB7Zw/TxRBGMZflMJEQi4U5hIplkhFdfaEHI2hpOAD3AcggZLuMKGHgsoGrLQgwcpY6ZFYYAUmajTReCRnggQJXE5EQu6cd29HxvXgdmfnL7y/ZLMjdzF389w8M++zswtAEFkoFos5dhTBc3rAU1jfT7ZarfXon9s9PT3jlUrlEDzkBngIEyBgAixiu695hqcCO2bBU7wUgVFmRzB8+hMW9t6Hf2CilFEc8BDvRMA5gHV4CdsLe++gcHIIU/Vv4Wvs7yvgId6JwDu6dLgD+bMTaLervI0aeWdLXokwNjYW2hB2OHY8B+eFuf1PYdtHW/JGBOxYtgKax/bS7tv/XkdbGj3ex2bON1vyRgTWsa/wjP7PbSjO9MEXvlpCW5oET/BCBGZDM9DBhuK0X98J2zgasJgDD3BeBNGGsIOjX/qFTNVroTUxcs1mswwe4MNIwI7MTTR2AY8k4CSNYjHxZn2INZwWgfVfCWsC0WaSgO8XawfXbclZEaJoIrQTsSZICs4dw6cNbAbgeKTh8kgIa4LCyVFiG4qDqyUkqh0K4ChOiiBGE3P7H0GWWKSxCI7ipAidoglZfIg0nBPhomhCFh8iDadE6BZNyOJ6pOGUCEmiCVl47QAORhrOiKDahuKgAK5GGk6IENlQOGkmiSZkcTXScGUkpI4mZHEx0rAugmw0IYuLkYZVEbJGE7KIkYYLtmR7JIST8ejxD+02FIdHGpEtWY00rInAbQjb0wefwTQu7dK4CRZAH2Zf/Alr5tCGokLKOCO/6/Dy9h1o3OjNDw0NHVWr1U2wgJWRwHw40eVK3bgSaRgXQVk08YAVva+/nh+DAciAtjTR+I5Na5GGcRF4NJF5NdSfa3c8PzKAc5IQaRhPWo2KoDSaqKvbgB2LNMqmawdjIog2xJeHmVAoAiJGGqYvABkTgfst1gO2VkPdEJLWkslIw4gIWBPgSWs0oWBk2No8pl0EY9GEInsSbMlYpGFiJISTsYmEVBWxSKMImtEqAo8mxNWHD2C4Z3KXhjYRomhCnw3VqqATYZdGgX2XedCINhEiPw3a+X0NfCMWaczojDS0iCBerlS5a8I0QtKqNdLQIoKyaCIpigs3EbQl3ZGGchF075roiEYROiStymsHpSKI0QT/4FcBrPCFSEO5LSkVgT/mAOuB6EPrZbNyfmhGiDQmVdcOyp5tEdUEK2hDOBmbumhvkrX+QVgeuIfNKhvx91U9S0PJSLC1a8I0uiINVXZkPprACznPt9hvsgXwaL19kccAOiKNzCKY3rz1l1mm+0i0UwUvdU6VwAQYaYhJKyggkwiiDenYSX0p8V++oZGAoC1F3zVQEWlkHQn2oomlh+f5EZ7XVsEUqiMN6dUR7lpjH2AL209rb+xMxvxi/4dtsMHywDBbMd3FZmVjY2McJJEeCbwmsLoawkrZkgCIqvvhpESwEk04CNpS7DbdACRILYKu+8p8RUWkkVoEnfeV+UrW++FSiSA+8sbHCzW6iO3SWEybtCYWIf7IGxoF/5Il0kgzEozdV+YrsvfDJRLBWjThGbL3w3UV4bokpKoQaocAEj7iJ8lIyPzIm+tG2htPeru9gf1HRTznz37Bai4AIhk4GnZ7b2GzyI7Vy97bVQQ2yTxGRV/05YFIDS6XKt3elCjAi3ZVB0Ck5Rm7BGov3CIIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgriS/AE3d3Ub9J86DQAAAABJRU5ErkJggg=="});
-        marker_2e6723daf43c6e5eb5a9d38fb43c4d0c.setIcon(custom_icon_a7dd8ecbab8d8f7ee573075fe35b60ab);
-        
-    
-        var popup_2716580ea664492706fa90acc7bd0153 = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_b10fa4c51ea3e53ee2b08ec67ef82980 = $(`<div id="html_b10fa4c51ea3e53ee2b08ec67ef82980" style="width: 100.0%; height: 100.0%;"><p>Россия, Республика Дагестан, Махачкала, Сухумская улица, 39</p><a target='_blank' href=''>подробнее...</a></div>`)[0];
-                popup_2716580ea664492706fa90acc7bd0153.setContent(html_b10fa4c51ea3e53ee2b08ec67ef82980);
-            
-        
-
-        marker_2e6723daf43c6e5eb5a9d38fb43c4d0c.bindPopup(popup_2716580ea664492706fa90acc7bd0153)
-        ;
-
-        
-    
-    
-            var marker_72475aa816ff433cb01d4bb98c2ae0c7 = L.marker(
-                [42.903257, 47.622532],
-                {}
-            ).addTo(map_f820112f71cb6aba46e79d7bd7ebc8fa);
-        
-    
-        var custom_icon_b7b156800dd675a0b74290c845a3e822 = L.icon({"iconSize": [50, 50], "iconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGEAAABYCAYAAADlc5nGAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAUGSURBVHgB7Zw/TxRBGMZflMJEQi4U5hIplkhFdfaEHI2hpOAD3AcggZLuMKGHgsoGrLQgwcpY6ZFYYAUmajTReCRnggQJXE5EQu6cd29HxvXgdmfnL7y/ZLMjdzF389w8M++zswtAEFkoFos5dhTBc3rAU1jfT7ZarfXon9s9PT3jlUrlEDzkBngIEyBgAixiu695hqcCO2bBU7wUgVFmRzB8+hMW9t6Hf2CilFEc8BDvRMA5gHV4CdsLe++gcHIIU/Vv4Wvs7yvgId6JwDu6dLgD+bMTaLervI0aeWdLXokwNjYW2hB2OHY8B+eFuf1PYdtHW/JGBOxYtgKax/bS7tv/XkdbGj3ex2bON1vyRgTWsa/wjP7PbSjO9MEXvlpCW5oET/BCBGZDM9DBhuK0X98J2zgasJgDD3BeBNGGsIOjX/qFTNVroTUxcs1mswwe4MNIwI7MTTR2AY8k4CSNYjHxZn2INZwWgfVfCWsC0WaSgO8XawfXbclZEaJoIrQTsSZICs4dw6cNbAbgeKTh8kgIa4LCyVFiG4qDqyUkqh0K4ChOiiBGE3P7H0GWWKSxCI7ipAidoglZfIg0nBPhomhCFh8iDadE6BZNyOJ6pOGUCEmiCVl47QAORhrOiKDahuKgAK5GGk6IENlQOGkmiSZkcTXScGUkpI4mZHEx0rAugmw0IYuLkYZVEbJGE7KIkYYLtmR7JIST8ejxD+02FIdHGpEtWY00rInAbQjb0wefwTQu7dK4CRZAH2Zf/Alr5tCGokLKOCO/6/Dy9h1o3OjNDw0NHVWr1U2wgJWRwHw40eVK3bgSaRgXQVk08YAVva+/nh+DAciAtjTR+I5Na5GGcRF4NJF5NdSfa3c8PzKAc5IQaRhPWo2KoDSaqKvbgB2LNMqmawdjIog2xJeHmVAoAiJGGqYvABkTgfst1gO2VkPdEJLWkslIw4gIWBPgSWs0oWBk2No8pl0EY9GEInsSbMlYpGFiJISTsYmEVBWxSKMImtEqAo8mxNWHD2C4Z3KXhjYRomhCnw3VqqATYZdGgX2XedCINhEiPw3a+X0NfCMWaczojDS0iCBerlS5a8I0QtKqNdLQIoKyaCIpigs3EbQl3ZGGchF075roiEYROiStymsHpSKI0QT/4FcBrPCFSEO5LSkVgT/mAOuB6EPrZbNyfmhGiDQmVdcOyp5tEdUEK2hDOBmbumhvkrX+QVgeuIfNKhvx91U9S0PJSLC1a8I0uiINVXZkPprACznPt9hvsgXwaL19kccAOiKNzCKY3rz1l1mm+0i0UwUvdU6VwAQYaYhJKyggkwiiDenYSX0p8V++oZGAoC1F3zVQEWlkHQn2oomlh+f5EZ7XVsEUqiMN6dUR7lpjH2AL209rb+xMxvxi/4dtsMHywDBbMd3FZmVjY2McJJEeCbwmsLoawkrZkgCIqvvhpESwEk04CNpS7DbdACRILYKu+8p8RUWkkVoEnfeV+UrW++FSiSA+8sbHCzW6iO3SWEybtCYWIf7IGxoF/5Il0kgzEozdV+YrsvfDJRLBWjThGbL3w3UV4bokpKoQaocAEj7iJ8lIyPzIm+tG2htPeru9gf1HRTznz37Bai4AIhk4GnZ7b2GzyI7Vy97bVQQ2yTxGRV/05YFIDS6XKt3elCjAi3ZVB0Ck5Rm7BGov3CIIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgriS/AE3d3Ub9J86DQAAAABJRU5ErkJggg=="});
-        marker_72475aa816ff433cb01d4bb98c2ae0c7.setIcon(custom_icon_b7b156800dd675a0b74290c845a3e822);
-        
-    
-        var popup_351caac358dfef3e9d82120dbc0a2a06 = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_23b2326ae54763adab7d93f40fb7fddb = $(`<div id="html_23b2326ae54763adab7d93f40fb7fddb" style="width: 100.0%; height: 100.0%;"><p>Россия, Республика Дагестан, Каспийск, улица Ленина, 61</p><a target='_blank' href=''>подробнее...</a></div>`)[0];
-                popup_351caac358dfef3e9d82120dbc0a2a06.setContent(html_23b2326ae54763adab7d93f40fb7fddb);
-            
-        
-
-        marker_72475aa816ff433cb01d4bb98c2ae0c7.bindPopup(popup_351caac358dfef3e9d82120dbc0a2a06)
-        ;
-
-        
-    
-    
-            var marker_bfe2912ce050f9d97c4abd9885732312 = L.marker(
-                [42.977566, 47.477634],
-                {}
-            ).addTo(map_f820112f71cb6aba46e79d7bd7ebc8fa);
-        
-    
-        var custom_icon_c0520f3f54a86ec6bc5c0387eec0daf4 = L.icon({"iconSize": [50, 50], "iconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGEAAABYCAYAAADlc5nGAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAUGSURBVHgB7Zw/TxRBGMZflMJEQi4U5hIplkhFdfaEHI2hpOAD3AcggZLuMKGHgsoGrLQgwcpY6ZFYYAUmajTReCRnggQJXE5EQu6cd29HxvXgdmfnL7y/ZLMjdzF389w8M++zswtAEFkoFos5dhTBc3rAU1jfT7ZarfXon9s9PT3jlUrlEDzkBngIEyBgAixiu695hqcCO2bBU7wUgVFmRzB8+hMW9t6Hf2CilFEc8BDvRMA5gHV4CdsLe++gcHIIU/Vv4Wvs7yvgId6JwDu6dLgD+bMTaLervI0aeWdLXokwNjYW2hB2OHY8B+eFuf1PYdtHW/JGBOxYtgKax/bS7tv/XkdbGj3ex2bON1vyRgTWsa/wjP7PbSjO9MEXvlpCW5oET/BCBGZDM9DBhuK0X98J2zgasJgDD3BeBNGGsIOjX/qFTNVroTUxcs1mswwe4MNIwI7MTTR2AY8k4CSNYjHxZn2INZwWgfVfCWsC0WaSgO8XawfXbclZEaJoIrQTsSZICs4dw6cNbAbgeKTh8kgIa4LCyVFiG4qDqyUkqh0K4ChOiiBGE3P7H0GWWKSxCI7ipAidoglZfIg0nBPhomhCFh8iDadE6BZNyOJ6pOGUCEmiCVl47QAORhrOiKDahuKgAK5GGk6IENlQOGkmiSZkcTXScGUkpI4mZHEx0rAugmw0IYuLkYZVEbJGE7KIkYYLtmR7JIST8ejxD+02FIdHGpEtWY00rInAbQjb0wefwTQu7dK4CRZAH2Zf/Alr5tCGokLKOCO/6/Dy9h1o3OjNDw0NHVWr1U2wgJWRwHw40eVK3bgSaRgXQVk08YAVva+/nh+DAciAtjTR+I5Na5GGcRF4NJF5NdSfa3c8PzKAc5IQaRhPWo2KoDSaqKvbgB2LNMqmawdjIog2xJeHmVAoAiJGGqYvABkTgfst1gO2VkPdEJLWkslIw4gIWBPgSWs0oWBk2No8pl0EY9GEInsSbMlYpGFiJISTsYmEVBWxSKMImtEqAo8mxNWHD2C4Z3KXhjYRomhCnw3VqqATYZdGgX2XedCINhEiPw3a+X0NfCMWaczojDS0iCBerlS5a8I0QtKqNdLQIoKyaCIpigs3EbQl3ZGGchF075roiEYROiStymsHpSKI0QT/4FcBrPCFSEO5LSkVgT/mAOuB6EPrZbNyfmhGiDQmVdcOyp5tEdUEK2hDOBmbumhvkrX+QVgeuIfNKhvx91U9S0PJSLC1a8I0uiINVXZkPprACznPt9hvsgXwaL19kccAOiKNzCKY3rz1l1mm+0i0UwUvdU6VwAQYaYhJKyggkwiiDenYSX0p8V++oZGAoC1F3zVQEWlkHQn2oomlh+f5EZ7XVsEUqiMN6dUR7lpjH2AL209rb+xMxvxi/4dtsMHywDBbMd3FZmVjY2McJJEeCbwmsLoawkrZkgCIqvvhpESwEk04CNpS7DbdACRILYKu+8p8RUWkkVoEnfeV+UrW++FSiSA+8sbHCzW6iO3SWEybtCYWIf7IGxoF/5Il0kgzEozdV+YrsvfDJRLBWjThGbL3w3UV4bokpKoQaocAEj7iJ8lIyPzIm+tG2htPeru9gf1HRTznz37Bai4AIhk4GnZ7b2GzyI7Vy97bVQQ2yTxGRV/05YFIDS6XKt3elCjAi3ZVB0Ck5Rm7BGov3CIIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgriS/AE3d3Ub9J86DQAAAABJRU5ErkJggg=="});
-        marker_bfe2912ce050f9d97c4abd9885732312.setIcon(custom_icon_c0520f3f54a86ec6bc5c0387eec0daf4);
-        
-    
-        var popup_bc396bbc49360942e0d55fd97668aecc = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_1f22dd0d03f856cabaec5155358fa4ee = $(`<div id="html_1f22dd0d03f856cabaec5155358fa4ee" style="width: 100.0%; height: 100.0%;"><p>Россия, Республика Дагестан, Махачкала, проспект Имама Шамиля, 22</p><a target='_blank' href=''>подробнее...</a></div>`)[0];
-                popup_bc396bbc49360942e0d55fd97668aecc.setContent(html_1f22dd0d03f856cabaec5155358fa4ee);
-            
-        
-
-        marker_bfe2912ce050f9d97c4abd9885732312.bindPopup(popup_bc396bbc49360942e0d55fd97668aecc)
-        ;
-
-        
-    
-    
-            var marker_fe3bc8c636f7257a9f0764194582a8c5 = L.marker(
-                [42.9831, 47.50457],
-                {}
-            ).addTo(map_f820112f71cb6aba46e79d7bd7ebc8fa);
-        
-    
-            var icon_4d779c362056ec16c908fecea4af4e95 = L.AwesomeMarkers.icon(
+            var icon_c1ff89732ecd17f3172214cdf97e7a5f = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
             );
-            marker_fe3bc8c636f7257a9f0764194582a8c5.setIcon(icon_4d779c362056ec16c908fecea4af4e95);
+            marker_ac4877e7bbfd9090ef66a20831c45c64.setIcon(icon_c1ff89732ecd17f3172214cdf97e7a5f);
         
     
-        var popup_e090218248c9cbc3b8e4d40a21de2b1e = L.popup({"maxWidth": "100%"});
+        var popup_e81ed9147af500f2fc7a4bcb8630302f = L.popup({"maxWidth": "100%"});
 
         
             
-                var html_17a008e7a767cba14f4e009e035d4503 = $(`<div id="html_17a008e7a767cba14f4e009e035d4503" style="width: 100.0%; height: 100.0%;"><strong>Жалоба №1</strong><p>Республика Дагестан, Махачкала, площадь Ленина</p><a target='_blank' href='/card/1'>подробнее...</a></div>`)[0];
-                popup_e090218248c9cbc3b8e4d40a21de2b1e.setContent(html_17a008e7a767cba14f4e009e035d4503);
+                var html_2e120ac51f9c0a1af7a780cc7bbdb048 = $(`<div id="html_2e120ac51f9c0a1af7a780cc7bbdb048" style="width: 100.0%; height: 100.0%;"><strong></strong><p>Республика Дагестан, Махачкала, улица Магомеда Ярагского, 88/61</p><a target='_blank' href='/card/1'>подробнее...</a></div>`)[0];
+                popup_e81ed9147af500f2fc7a4bcb8630302f.setContent(html_2e120ac51f9c0a1af7a780cc7bbdb048);
             
         
 
-        marker_fe3bc8c636f7257a9f0764194582a8c5.bindPopup(popup_e090218248c9cbc3b8e4d40a21de2b1e)
+        marker_ac4877e7bbfd9090ef66a20831c45c64.bindPopup(popup_e81ed9147af500f2fc7a4bcb8630302f)
+        ;
+
+        
+    
+    
+            var marker_44f0893c39739b185264cef7857accd5 = L.marker(
+                [42.97134724054135, 47.50660149458858],
+                {}
+            ).addTo(map_749e4dd17c5dcde878e4b44f62826bbf);
+        
+    
+            var icon_89aa3d6fd9c67d697be7568d607ee0c9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_44f0893c39739b185264cef7857accd5.setIcon(icon_89aa3d6fd9c67d697be7568d607ee0c9);
+        
+    
+        var popup_8eb378f7e4b72426bec12e8d57d5f7e6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f7b2ecee4b217d83200228aa4e04d44e = $(`<div id="html_f7b2ecee4b217d83200228aa4e04d44e" style="width: 100.0%; height: 100.0%;"><strong>id</strong><p>Республика Дагестан, Махачкала, улица Магомеда Ярагского, 78</p><a target='_blank' href='/card/2'>подробнее...</a></div>`)[0];
+                popup_8eb378f7e4b72426bec12e8d57d5f7e6.setContent(html_f7b2ecee4b217d83200228aa4e04d44e);
+            
+        
+
+        marker_44f0893c39739b185264cef7857accd5.bindPopup(popup_8eb378f7e4b72426bec12e8d57d5f7e6)
+        ;
+
+        
+    
+    
+            var marker_5438d0c26a281bd98772119a31c04391 = L.marker(
+                [42.96891262763873, 47.514072635816404],
+                {}
+            ).addTo(map_749e4dd17c5dcde878e4b44f62826bbf);
+        
+    
+            var icon_a234eaf138f3b81de39a460e3967ab36 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_5438d0c26a281bd98772119a31c04391.setIcon(icon_a234eaf138f3b81de39a460e3967ab36);
+        
+    
+        var popup_b7db03393271290de482b22f0f9ddfa9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3d4442ea11748712e1b181d89a110a80 = $(`<div id="html_3d4442ea11748712e1b181d89a110a80" style="width: 100.0%; height: 100.0%;"><strong>aaa</strong><p>Республика Дагестан, Махачкала, улица Юсупова, 51Ж</p><a target='_blank' href='/card/3'>подробнее...</a></div>`)[0];
+                popup_b7db03393271290de482b22f0f9ddfa9.setContent(html_3d4442ea11748712e1b181d89a110a80);
+            
+        
+
+        marker_5438d0c26a281bd98772119a31c04391.bindPopup(popup_b7db03393271290de482b22f0f9ddfa9)
+        ;
+
+        
+    
+    
+            var marker_1a04be491bfb621091d3d2d0e066ec00 = L.marker(
+                [42.97557011684572, 47.49909721003257],
+                {}
+            ).addTo(map_749e4dd17c5dcde878e4b44f62826bbf);
+        
+    
+            var icon_806c64ea4e1ddf08f1739857640b8643 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_1a04be491bfb621091d3d2d0e066ec00.setIcon(icon_806c64ea4e1ddf08f1739857640b8643);
+        
+    
+        var popup_ac787bff9796767b6050bdab1e9466b3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d4a0b8d63f0aa729a44d1c0bca95ff53 = $(`<div id="html_d4a0b8d63f0aa729a44d1c0bca95ff53" style="width: 100.0%; height: 100.0%;"><strong>rff</strong><p>Республика Дагестан, Махачкала, улица Рустамова</p><a target='_blank' href='/card/4'>подробнее...</a></div>`)[0];
+                popup_ac787bff9796767b6050bdab1e9466b3.setContent(html_d4a0b8d63f0aa729a44d1c0bca95ff53);
+            
+        
+
+        marker_1a04be491bfb621091d3d2d0e066ec00.bindPopup(popup_ac787bff9796767b6050bdab1e9466b3)
+        ;
+
+        
+    
+    
+            var marker_e2fbd49bb872713ff9717ea06338474a = L.marker(
+                [42.96963308322134, 47.49385930456336],
+                {}
+            ).addTo(map_749e4dd17c5dcde878e4b44f62826bbf);
+        
+    
+            var icon_171cf30bcc9ad016cf4b6acc1523632b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_e2fbd49bb872713ff9717ea06338474a.setIcon(icon_171cf30bcc9ad016cf4b6acc1523632b);
+        
+    
+        var popup_6d412ebeec97e90c4fe216e4ff189141 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a8ac8759d773868f8a29e0395fda2136 = $(`<div id="html_a8ac8759d773868f8a29e0395fda2136" style="width: 100.0%; height: 100.0%;"><strong>s</strong><p>Республика Дагестан, Махачкала, улица Дахадаева, 136</p><a target='_blank' href='/card/5'>подробнее...</a></div>`)[0];
+                popup_6d412ebeec97e90c4fe216e4ff189141.setContent(html_a8ac8759d773868f8a29e0395fda2136);
+            
+        
+
+        marker_e2fbd49bb872713ff9717ea06338474a.bindPopup(popup_6d412ebeec97e90c4fe216e4ff189141)
+        ;
+
+        
+    
+    
+            var marker_7dad75e5c9dddc79448b70cda5a691b2 = L.marker(
+                [42.95942168176529, 47.49416487339485],
+                {}
+            ).addTo(map_749e4dd17c5dcde878e4b44f62826bbf);
+        
+    
+            var icon_53d648f2d00c8c1fec2155e9c0740eaf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_7dad75e5c9dddc79448b70cda5a691b2.setIcon(icon_53d648f2d00c8c1fec2155e9c0740eaf);
+        
+    
+        var popup_db88fc8ee3d24759663b279bc348cc9a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ba0a85255407a50849553244fd2c1dc2 = $(`<div id="html_ba0a85255407a50849553244fd2c1dc2" style="width: 100.0%; height: 100.0%;"><strong>aa</strong><p>Республика Дагестан, Махачкала, микрорайон 5-й Жилгородок</p><a target='_blank' href='/card/6'>подробнее...</a></div>`)[0];
+                popup_db88fc8ee3d24759663b279bc348cc9a.setContent(html_ba0a85255407a50849553244fd2c1dc2);
+            
+        
+
+        marker_7dad75e5c9dddc79448b70cda5a691b2.bindPopup(popup_db88fc8ee3d24759663b279bc348cc9a)
+        ;
+
+        
+    
+    
+            var marker_a3a634a51530e35b3f34ed8529a6f454 = L.marker(
+                [42.98115831898233, 47.48436360734421],
+                {}
+            ).addTo(map_749e4dd17c5dcde878e4b44f62826bbf);
+        
+    
+            var icon_6ee496a8ed1aea382713c136bb944df0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_a3a634a51530e35b3f34ed8529a6f454.setIcon(icon_6ee496a8ed1aea382713c136bb944df0);
+        
+    
+        var popup_a9df0e6a02724c71429276b401f9e6d8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_673a9365a7108a3fc587db498f547102 = $(`<div id="html_673a9365a7108a3fc587db498f547102" style="width: 100.0%; height: 100.0%;"><strong>aa</strong><p>Республика Дагестан, Махачкала, улица Танкаева, 60</p><a target='_blank' href='/card/7'>подробнее...</a></div>`)[0];
+                popup_a9df0e6a02724c71429276b401f9e6d8.setContent(html_673a9365a7108a3fc587db498f547102);
+            
+        
+
+        marker_a3a634a51530e35b3f34ed8529a6f454.bindPopup(popup_a9df0e6a02724c71429276b401f9e6d8)
         ;
 
         
