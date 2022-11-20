@@ -4,9 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Карта жалоб</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
 </head>
 <body>
-    <object type="text/html" data="static/map.html" style="width: 100%; height:1000px">
+    <div class="container">
+        <h2>Карта жалоб</h2>
+        <input type="text" placeholder="Введите адрес" name="input_address" id="input_address">
+        <button class="btn btn-primary" onclick="findAddress()">Найти</button>
+        <br><br>
+        <object type="text/html" id="map_object" data="static/map.html" style="width: 100%; height: 700px"></object>
+    </div>
+    
+    
 </body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+<script>
+     function findAddress() {
+            var search_text = $(input_address).val();
+            $.ajax({
+                url: "/get_map/address=" + search_text,
+                type: "POST",
+                dataType: "json",
+                success: function (data) {
+                    var element = document.getElementById("map_object");
+                    element.setAttribute("data", "static/map.html");
+                }
+            });
+        }
+</script>
 </html>

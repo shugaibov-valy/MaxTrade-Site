@@ -1,0 +1,451 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Карточка {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<div class="py-4">
+    <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
+        <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
+            <li class="breadcrumb-item">
+                <a href="#">
+                    <svg class="icon icon-xxs" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
+                        </path>
+                    </svg>
+                </a>
+            </li>
+            <li class="breadcrumb-item"><a href="#">MaxTrade-Map</a></li>
+            <li class="breadcrumb-item"><a href="#">Жалоба № {{ info['id'] }}</a></li>
+        </ol>
+        <a href="/map">Вернуться на карту <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
+            <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+          </svg></a>
+    </nav>
+    <div class="d-flex justify-content-between w-100 flex-wrap">
+        <div class="mb-3 mb-lg-0">
+            <h3>Данные о жалобе</h3>
+        </div>
+    </div>
+</div>
+
+<div class="row" id="form">
+    <div class="col-12 mb-4">
+        <div class="card border-0 shadow components-section">
+            <div class="card-body">
+                <div class="row mb-4">
+                    <div class="col-lg-6 col-sm-6">
+                        <h4>{{ info['title'] }}</h4>
+
+                    
+                        <!-- Form -->
+                        <div class="mb-4">
+                            <label for="login">ФИО:</label>
+                            <input type="login" class="form-control" id="address" value="{{ author['surname'] }} {{ author['name'] }}" readonly>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="login">Адрес:</label>
+                            <input type="login" class="form-control" id="address" value="{{ info['streetName'] }}" readonly>
+                        </div>
+                    
+                        <!-- Form -->
+                        <div class="mb-4">
+                            <label for="login">Категория:</label>
+                            <input type="login" class="form-control" id="category" value="{{ info['type'] }}" readonly>
+                        </div>
+                        
+                        <!-- Form -->
+                        <div class="my-4">
+                            <label for="textarea">Описание:</label>
+                            <textarea class="form-control" placeholder="Комментарий" id="comment" rows="5"
+                                readonly>{{ info['description'] }}</textarea>
+                        </div>
+
+                        <!-- Form -->
+                        <div class="mb-4">
+                            <label for="login">Кол-во лайков <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                              </svg>:</label>
+                            <input type="login" class="form-control" id="count_like" value="{{ info['count_like'] }} " readonly>
+                        </div>
+
+                         <!-- Form -->
+                         <div class="mb-4">
+                            <label for="login">Дата создания:</label>
+                            <input type="login" class="form-control" id="count_like" value="{{ info['date'].split('.')[0] }}" readonly>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="col-lg-4 col-sm-6" id="chat_box">
+
+                        <h4>Чат</h4>
+                        <section class="chatbox">
+                          <section class="chat-window">
+                            {% for mes in messages %}
+                            <article class="msg-container msg-remote" id="msg-0">
+                              <div class="msg-box">
+                                <div class="flr">
+                                  <div class="messages">
+                                    {% if mes.detailed == None %}
+                                    <p class="msg" id="msg-0">
+                                      {{ mes.text }}
+                                    </p>
+                                    {% elif mes.detailed == "True" %}
+                                    <!-- делим текст по точке -->
+                                    <p class="msg" id="msg-0">
+                                      {{ mes.text[0] }}
+                                    </p>
+                                    <div class="accordion" id="#pa">
+                                      <div class="accordion-item">
+                                        <p class="accordion-header" id="headingOne">
+                                          <button class="accordion-button" type="button" style="color: #black; height: 30px"
+                                            data-bs-toggle="collapse" data-bs-target="#p{{ mes.id }}" aria-expanded="true" aria-controls="p">
+                                            Подробнее
+                                          </button>
+                                        </p>
+                                        <div id="p{{ mes.id }}" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                          data-bs-parent="#pa">
+                                          <div class="accordion-body" style="color: white;">
+                                            {{ mes.text[1] }}
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                      
+                                    {% endif %}
+                                  </div>
+                                  <span class="timestamp"><span class="username">{{ mes.worker }}</span>&bull;<span class="posttime">{{
+                                      mes.created_at }}</span></span>
+                                </div>
+                              </div>
+                            </article>
+                      
+                            {% endfor %}
+                      
+                          </section>
+                      
+                          <form class="chat-input" onsubmit="return false;">
+                            <input type="text" name="input_value" id="input_value" autocomplete="on" placeholder="Введите сообщение" />
+                            <button onclick="SendMessage()">
+                              <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                <path
+                                  d="M17,12L12,17V14H8V10H12V7L17,12M21,16.5C21,16.88 20.79,17.21 20.47,17.38L12.57,21.82C12.41,21.94 12.21,22 12,22C11.79,22 11.59,21.94 11.43,21.82L3.53,17.38C3.21,17.21 3,16.88 3,16.5V7.5C3,7.12 3.21,6.79 3.53,6.62L11.43,2.18C11.59,2.06 11.79,2 12,2C12.21,2 12.41,2.06 12.57,2.18L20.47,6.62C20.79,6.79 21,7.12 21,7.5V16.5M12,4.15L5,8.09V15.91L12,19.85L19,15.91V8.09L12,4.15Z" />
+                              </svg>
+                      
+                            </button>
+                          </form>
+                        </section>
+                      </div>
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #212529;
+      text-align: left;
+      background-color: #fff;
+    }
+  
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+  
+    .accordion__item {
+      margin-bottom: 0.5rem;
+      border-radius: 0.25rem;
+      box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 15%);
+    }
+  
+    .accordion__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1rem;
+      color: #fff;
+      font-weight: 500;
+      background-color: #0d6efd;
+      border-top-left-radius: 0.25rem;
+      border-top-right-radius: 0.25rem;
+      cursor: pointer;
+      transition: background-color 0.2s ease-out;
+    }
+  
+    .accordion__header::after {
+      flex-shrink: 0;
+      width: 1.25rem;
+      height: 1.25rem;
+      margin-left: auto;
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-size: 1.25rem;
+      content: "";
+    }
+  
+    .accordion__item_show .accordion__header::after {
+      transform: rotate(-180deg);
+    }
+  
+    .accordion__header:hover {
+      background-color: #0b5ed7;
+    }
+  
+    .accordion__item_hidden .accordion__header {
+      border-bottom-right-radius: 0.25rem;
+      border-bottom-left-radius: 0.25rem;
+    }
+  
+    .accordion__body {
+      padding: 0.75rem 1rem;
+      overflow: hidden;
+      background: #fff;
+      border-bottom-right-radius: 0.25rem;
+      border-bottom-left-radius: 0.25rem;
+    }
+  
+    .accordion__item:not(.accordion__item_show) .accordion__body {
+      display: none;
+    }
+  </style>
+  
+  <script>
+    class ItcAccordion {
+      constructor(target, config) {
+        this._el = typeof target === 'string' ? document.querySelector(target) : target;
+        const defaultConfig = {
+          alwaysOpen: true
+        };
+        this._config = Object.assign(defaultConfig, config);
+        this.addEventListener();
+      }
+      addEventListener() {
+        this._el.addEventListener('click', (e) => {
+          const elHeader = e.target.closest('.accordion__header');
+          if (!elHeader) {
+            return;
+          }
+          if (!this._config.alwaysOpen) {
+            const elOpenItem = this._el.querySelector('.accordion__item_show');
+            if (elOpenItem) {
+              elOpenItem !== elHeader.parentElement ? elOpenItem.classList.toggle('accordion__item_show') : null;
+            }
+          }
+          elHeader.parentElement.classList.toggle('accordion__item_show');
+        });
+      }
+    }
+  
+    new ItcAccordion('#accordion-1');
+    new ItcAccordion('#accordion-2');
+  </script>
+  
+  <style>
+    ::-webkit-scrollbar {
+      width: 4px;
+    }
+  
+    ::-webkit-scrollbar-thumb {
+      background-color: #4c4c6a;
+      border-radius: 2px;
+    }
+  
+    .chatbox {
+      width: 100%;
+      height: 500px;
+      max-height: 500px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+    }
+  
+    .chat-window {
+      flex: auto;
+      max-height: calc(100% - 60px);
+      background: #2f323b;
+      overflow: auto;
+    }
+  
+    .chat-input {
+      flex: 0 0 auto;
+      height: 60px;
+      background: #40434e;
+      border-top: 1px solid #2671ff;
+      box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+    }
+  
+    .chat-input input {
+      height: 59px;
+      line-height: 60px;
+      outline: 0 none;
+      border: none;
+      width: calc(100% - 60px);
+      color: white;
+      text-indent: 10px;
+      font-size: 14pt;
+      padding: 0;
+      background: #40434e;
+    }
+  
+    .chat-input button {
+      float: right;
+      outline: 0 none;
+      border: none;
+      background: rgba(255, 255, 255, .25);
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      padding: 2px 0 0 0;
+      margin: 10px;
+      transition: all 0.15s ease-in-out;
+    }
+  
+    .chat-input input[good]+button {
+      box-shadow: 0 0 2px rgba(0, 0, 0, .12), 0 2px 4px rgba(0, 0, 0, .24);
+      background: #2671ff;
+    }
+  
+    .chat-input input[good]+button:hover {
+      box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+  
+    .chat-input input[good]+button path {
+      fill: white;
+    }
+  
+    .msg-container {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      margin: 0 0 10px 0;
+      padding: 0;
+    }
+  
+    .msg-box {
+      display: flex;
+      background: #5b5e6c;
+      padding: 10px 10px 0 10px;
+      border-radius: 0 6px 6px 0;
+      max-width: 80%;
+      width: auto;
+      float: left;
+      box-shadow: 0 0 2px rgba(0, 0, 0, .12), 0 2px 4px rgba(0, 0, 0, .24);
+    }
+  
+    .user-img {
+      display: inline-block;
+      border-radius: 50%;
+      height: 40px;
+      width: 40px;
+      background: #2671ff;
+      margin: 0 10px 10px 0;
+    }
+  
+    .flr {
+      flex: 1 0 auto;
+      display: flex;
+      flex-direction: column;
+      width: calc(100% - 50px);
+    }
+  
+    .messages {
+      flex: 1 0 auto;
+    }
+  
+    .msg {
+      display: inline-block;
+      font-size: 12pt;
+      line-height: 12pt;
+      color: white;
+      < !--color: rgba(255, 255, 255, .7);
+      -->margin: 0 0 4px 0;
+    }
+  
+    .msg:first-of-type {
+      margin-top: 8px;
+    }
+  
+    .timestamp {
+      color: rgba(255, 255, 255, .7);
+      font-size: 10pt;
+      margin-bottom: 10px;
+    }
+  
+    .username {
+      margin-right: 3px;
+    }
+  
+    .posttime {
+      margin-left: 3px;
+    }
+  
+    .msg-self .msg-box {
+      border-radius: 6px 0 0 6px;
+      background: #2671ff;
+      float: right;
+    }
+  
+    .msg-self .user-img {
+      margin: 0 0 10px 10px;
+    }
+  
+    .msg-self .msg {
+      text-align: right;
+    }
+  
+    .msg-self .timestamp {
+      text-align: right;
+    }
+  </style>
+  
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+
+
+<script>
+
+
+function SendMessage() {
+    input_value = $("#input_value").val();
+    $.ajax({
+      url: "/create_message_requests/text=" + input_value + "&worker_id=" + {{ worker_id }} + "&request_id=" + {{ request_id }},
+    type: "POST",
+        dataType: "json",
+        success: function(data) {
+            $(chat_box).replaceWith(data)
+        }
+   }); 
+
+   
+}
+</script>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

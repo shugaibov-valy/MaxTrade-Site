@@ -1,4 +1,3 @@
-
 from views.map_page import views
 
 

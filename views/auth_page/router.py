@@ -7,3 +7,8 @@ def install(app):
       '/',
       view_func=views.LoginView.as_view('auth-page')
     )
+
+    app.add_url_rule(
+      '/get_map/address=<string:address>',
+      view_func=views.SearchAddressView.as_view('get_map-page')
+    )

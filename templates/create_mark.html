@@ -1,0 +1,354 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Карточка {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<div class="py-4">
+    <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
+        <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
+            <li class="breadcrumb-item">
+                <a href="#">
+                    <svg class="icon icon-xxs" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
+                        </path>
+                    </svg>
+                </a>
+            </li>
+            <li class="breadcrumb-item"><a href="#">MaxTrade-Map</a></li>
+            <li class="breadcrumb-item"><a href="#">Жалоба №</a></li>
+        </ol>
+        <a href="/map">Вернуться на карту <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
+            <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+          </svg></a>
+    </nav>
+    <div class="d-flex justify-content-between w-100 flex-wrap">
+        <div class="mb-3 mb-lg-0">
+            <h3>Данные о метке</h3>
+        </div>
+    </div>
+</div>
+
+<div class="row" id="form">
+    <div class="col-12 mb-4">
+        <div class="card border-0 shadow components-section">
+            <div class="card-body">
+                <div class="row mb-4">
+                    <div class="col-lg-6 col-sm-6">
+                        <h4>Создание аварийной метки</h4>
+                        
+                        <!-- Form -->
+                        <form method="post">
+                            <div class="my-4">
+                                <label for="textarea">Описание:</label>
+                                <textarea class="form-control" placeholder="Описание" name="description" id="description" rows="5"></textarea>
+                            </div>
+                            <button class="btn btn-success" type="submit">Создать метку</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #212529;
+      text-align: left;
+      background-color: #fff;
+    }
+  
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+  
+    .accordion__item {
+      margin-bottom: 0.5rem;
+      border-radius: 0.25rem;
+      box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 15%);
+    }
+  
+    .accordion__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1rem;
+      color: #fff;
+      font-weight: 500;
+      background-color: #0d6efd;
+      border-top-left-radius: 0.25rem;
+      border-top-right-radius: 0.25rem;
+      cursor: pointer;
+      transition: background-color 0.2s ease-out;
+    }
+  
+    .accordion__header::after {
+      flex-shrink: 0;
+      width: 1.25rem;
+      height: 1.25rem;
+      margin-left: auto;
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-size: 1.25rem;
+      content: "";
+    }
+  
+    .accordion__item_show .accordion__header::after {
+      transform: rotate(-180deg);
+    }
+  
+    .accordion__header:hover {
+      background-color: #0b5ed7;
+    }
+  
+    .accordion__item_hidden .accordion__header {
+      border-bottom-right-radius: 0.25rem;
+      border-bottom-left-radius: 0.25rem;
+    }
+  
+    .accordion__body {
+      padding: 0.75rem 1rem;
+      overflow: hidden;
+      background: #fff;
+      border-bottom-right-radius: 0.25rem;
+      border-bottom-left-radius: 0.25rem;
+    }
+  
+    .accordion__item:not(.accordion__item_show) .accordion__body {
+      display: none;
+    }
+  </style>
+  
+  <script>
+    class ItcAccordion {
+      constructor(target, config) {
+        this._el = typeof target === 'string' ? document.querySelector(target) : target;
+        const defaultConfig = {
+          alwaysOpen: true
+        };
+        this._config = Object.assign(defaultConfig, config);
+        this.addEventListener();
+      }
+      addEventListener() {
+        this._el.addEventListener('click', (e) => {
+          const elHeader = e.target.closest('.accordion__header');
+          if (!elHeader) {
+            return;
+          }
+          if (!this._config.alwaysOpen) {
+            const elOpenItem = this._el.querySelector('.accordion__item_show');
+            if (elOpenItem) {
+              elOpenItem !== elHeader.parentElement ? elOpenItem.classList.toggle('accordion__item_show') : null;
+            }
+          }
+          elHeader.parentElement.classList.toggle('accordion__item_show');
+        });
+      }
+    }
+  
+    new ItcAccordion('#accordion-1');
+    new ItcAccordion('#accordion-2');
+  </script>
+  
+  <style>
+    ::-webkit-scrollbar {
+      width: 4px;
+    }
+  
+    ::-webkit-scrollbar-thumb {
+      background-color: #4c4c6a;
+      border-radius: 2px;
+    }
+  
+    .chatbox {
+      width: 100%;
+      height: 500px;
+      max-height: 500px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+    }
+  
+    .chat-window {
+      flex: auto;
+      max-height: calc(100% - 60px);
+      background: #2f323b;
+      overflow: auto;
+    }
+  
+    .chat-input {
+      flex: 0 0 auto;
+      height: 60px;
+      background: #40434e;
+      border-top: 1px solid #2671ff;
+      box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+    }
+  
+    .chat-input input {
+      height: 59px;
+      line-height: 60px;
+      outline: 0 none;
+      border: none;
+      width: calc(100% - 60px);
+      color: white;
+      text-indent: 10px;
+      font-size: 14pt;
+      padding: 0;
+      background: #40434e;
+    }
+  
+    .chat-input button {
+      float: right;
+      outline: 0 none;
+      border: none;
+      background: rgba(255, 255, 255, .25);
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      padding: 2px 0 0 0;
+      margin: 10px;
+      transition: all 0.15s ease-in-out;
+    }
+  
+    .chat-input input[good]+button {
+      box-shadow: 0 0 2px rgba(0, 0, 0, .12), 0 2px 4px rgba(0, 0, 0, .24);
+      background: #2671ff;
+    }
+  
+    .chat-input input[good]+button:hover {
+      box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+  
+    .chat-input input[good]+button path {
+      fill: white;
+    }
+  
+    .msg-container {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      margin: 0 0 10px 0;
+      padding: 0;
+    }
+  
+    .msg-box {
+      display: flex;
+      background: #5b5e6c;
+      padding: 10px 10px 0 10px;
+      border-radius: 0 6px 6px 0;
+      max-width: 80%;
+      width: auto;
+      float: left;
+      box-shadow: 0 0 2px rgba(0, 0, 0, .12), 0 2px 4px rgba(0, 0, 0, .24);
+    }
+  
+    .user-img {
+      display: inline-block;
+      border-radius: 50%;
+      height: 40px;
+      width: 40px;
+      background: #2671ff;
+      margin: 0 10px 10px 0;
+    }
+  
+    .flr {
+      flex: 1 0 auto;
+      display: flex;
+      flex-direction: column;
+      width: calc(100% - 50px);
+    }
+  
+    .messages {
+      flex: 1 0 auto;
+    }
+  
+    .msg {
+      display: inline-block;
+      font-size: 12pt;
+      line-height: 12pt;
+      color: white;
+      < !--color: rgba(255, 255, 255, .7);
+      -->margin: 0 0 4px 0;
+    }
+  
+    .msg:first-of-type {
+      margin-top: 8px;
+    }
+  
+    .timestamp {
+      color: rgba(255, 255, 255, .7);
+      font-size: 10pt;
+      margin-bottom: 10px;
+    }
+  
+    .username {
+      margin-right: 3px;
+    }
+  
+    .posttime {
+      margin-left: 3px;
+    }
+  
+    .msg-self .msg-box {
+      border-radius: 6px 0 0 6px;
+      background: #2671ff;
+      float: right;
+    }
+  
+    .msg-self .user-img {
+      margin: 0 0 10px 10px;
+    }
+  
+    .msg-self .msg {
+      text-align: right;
+    }
+  
+    .msg-self .timestamp {
+      text-align: right;
+    }
+  </style>
+  
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+
+
+<script>
+
+
+function SendMessage() {
+    input_value = $("#input_value").val();
+    $.ajax({
+      url: "/create_message_requests/text=" + input_value + "&worker_id=" + {{ worker_id }} + "&request_id=" + {{ request_id }},
+    type: "POST",
+        dataType: "json",
+        success: function(data) {
+            $(chat_box).replaceWith(data)
+        }
+   }); 
+
+   
+}
+</script>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
